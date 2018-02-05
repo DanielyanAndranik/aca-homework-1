@@ -47,37 +47,36 @@ namespace ComplexNumber
     {
         private Double value;
 
-        public ImaginityPart(Double value)
+        public ImaginityPart(Double value) //parametrized constructor 
         {
             this.value = value;
         }
 
-        public Double add(ImaginityPart number)
+        public Double add(ImaginityPart number) //method to add two imaginity parts
         {
             return this.value + number.value;
         }
 
-        public Double substract(ImaginityPart number)
+        public Double substract(ImaginityPart number)//method to substract two imaginity parts
         {
             return this.value - number.value;
         }
 
-        public Double multiply(ImaginityPart number)
+        public Double multiply(ImaginityPart number)//method to multiply two imaginity parts
         {
-            return -this.value * number.getValue();
-        }
+            return -this.value * number.getValue(); // return - because of i*i
 
-        public Double multiply(RealPart number)
+        public Double multiply(RealPart number)//method to multiply a real and an imaginity parts
         {
             return this.value * number.getValue();
         }
 
-        public Double getSquare()
+        public Double getSquare()  // return square of the value
         {
             return getValue() * getValue();
         }
 
-        public Double getValue()
+        public Double getValue() // return the value
         {
             return this.value;
         }
